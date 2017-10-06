@@ -1,6 +1,6 @@
 # Remote SSH Keys
 
-Simple tool that use a YAML file to lookup for SSH Keys.
+Simple tool that uses a YAML file to lookup for SSH Keys.
 
 # Install
 
@@ -11,9 +11,10 @@ mv remote-ssh-keys /usr/bin
 chmod 700 /usr/bin/remote-ssh-keys
 chown root:root /usr/bin/remote-ssh-keys
 touch /etc/remote-ssh-keys.conf
+chmod 600 /etc/remote-ssh-keys.conf
 ```
 
-Tell you SSH server
+Tell your SSH server
 
 ```
 # /etc/ssh/sshd_config
@@ -38,12 +39,12 @@ accounts:
             - "plaintext_plopix"
 ```
 
-Here that is pretty simple, if someone try to login as `s.morel`, the system
-will loop and look online on each providers (github, url, and plain) to find
-public keys. If the SSH client match a public key with a private proposed then
+Here that is pretty simple, if someone tries to login as `s.morel`, the system
+will loop and look online on each provider (github, url, and plain) to find
+public keys. If the SSH client matches a public key with a private proposed then
 the user is logged.
 
-This little tool avoid you to manage your SSH Keys.
+This little tool avoids you to manage your SSH AuthorizedKeys. (~/.ssh/authorized_keys)
 
 ```bash
 /etc/init.d/ssh restart
