@@ -1,0 +1,18 @@
+---
+accounts:
+    s.morel:
+        github:
+            - "plopix"
+        url:
+            - "https://github.com/%s.keys"
+            - "https://github.com/Plopix.keys?%s"
+        plain:
+            - "plaintext_plopix"
+    l.skywalker:
+        plain:
+            - "usetheforce"
+    root:
+        github:
+            - "plopix"
+        plain:
+            - "plaintext_root"
