@@ -13,6 +13,9 @@ chown root:root /usr/bin/remote-ssh-keys
 touch /etc/remote-ssh-keys.conf
 ```
 
+Tell you SSH server
+
+```
 # /etc/ssh/sshd_config
 AuthorizedKeysCommand /usr/bin/remote-ssh-keys %u %h %t %f %k
 AuthorizedKeysCommandUser root
